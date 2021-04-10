@@ -16,3 +16,29 @@ function combiner(...arrays) {
 
     return(tempArr);
 }
+
+//3 : Function for remove duplicate item from array
+function dupDeleter(arr) {
+    tempArr = []
+    for (const key of arr) {
+        // // With array ready func
+        // if (tempArr.indexOf(key) == -1) {
+        //     tempArr.push(key)
+        // }
+
+            // Without array funcs
+        if (arrSearch(key,tempArr)!= true) {
+            tempArr.push(key)
+        }
+    }
+    return(tempArr)
+}
+
+function arrSearch(key,arr) {
+    for (const iterator of arr) {
+        if (iterator == key) {
+            return true
+        }
+    }
+}
+
