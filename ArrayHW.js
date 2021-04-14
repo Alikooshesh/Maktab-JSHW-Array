@@ -80,3 +80,17 @@
 //     return nums
 // }
 
+//5 Flat arrays :
+var temparr=[]
+function flatArr(arr) {  
+    for (let index = 0; index < arr.length; index++) {
+        if (typeof(arr[index]) == "object") {
+            flatArr(arr[index])
+        }else{
+            temparr.push(arr[index])
+        }
+        
+    }
+    return temparr
+    temparr=[]
+}
